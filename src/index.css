@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0a0a0f;
+    color: #94a3b8;
+    font-family: 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Syne', sans-serif;
+  }
+  .gradient-text {
+    background: linear-gradient(135deg, #a78bfa, #6366f1, #f59e0b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .card-glow {
+    box-shadow:
+      0 0 0 1px rgba(99, 102, 241, 0.15),
+      0 4px 24px rgba(99, 102, 241, 0.08);
+  }
+  .card-glow:hover {
+    box-shadow:
+      0 0 0 1px rgba(99, 102, 241, 0.4),
+      0 8px 40px rgba(99, 102, 241, 0.2);
+  }
+  .spark-glow {
+    box-shadow:
+      0 0 0 1px rgba(245, 158, 11, 0.2),
+      0 4px 24px rgba(245, 158, 11, 0.1);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.1);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+input, textarea {
+  color: white !important;
+  caret-color: #a78bfa;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill {
+  -webkit-text-fill-color: white !important;
+  -webkit-box-shadow: 0 0 0px 1000px #1a1a28 inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
