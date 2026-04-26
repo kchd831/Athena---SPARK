@@ -22,8 +22,40 @@ export default function Home() {
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          style={{ textAlign: 'center', padding: '48px 0 40px' }}
+          style={{ textAlign: 'center', padding: '48px 0 40px', position: 'relative' }}
         >
+          <div style={{
+            position: 'absolute',
+            top: '24px',
+            left: '24px',
+          }}>
+            <button
+              onClick={() => window.location.href = 'https://athena-hub-app.vercel.app'}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                fontSize: '13px',
+                color: '#64748b',
+                background: 'none',
+                border: 'none',
+                cursor: 'pointer',
+                padding: '4px 8px',
+                borderRadius: '8px',
+                transition: 'color 0.15s',
+                whiteSpace: 'nowrap',
+              }}
+              onMouseEnter={e => e.currentTarget.style.color = '#e2e8f0'}
+              onMouseLeave={e => e.currentTarget.style.color = '#64748b'}
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+              返回导航主页
+            </button>
+          </div>
+
           <div style={{
             display: 'inline-flex', alignItems: 'center', gap: '6px',
             background: 'rgba(245,158,11,0.1)', border: '1px solid rgba(245,158,11,0.25)',
