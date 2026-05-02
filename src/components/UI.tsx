@@ -67,7 +67,7 @@ export const Navbar = ({ showBack = false }: { showBack?: boolean }) => {
               </button>
             ) : (
               <button
-                onClick={() => window.location.href = 'https://athena-hub-app.vercel.app'}
+                onClick={() => window.location.href = 'https://athena-pr.com'}
                 style={{
                   display: 'flex',
                   alignItems: 'center',
